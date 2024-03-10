@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import MainStack from './MainStack'
-const Navigation = () => {
+import AuthStack from './AuthStack'
+const Navigation = ({loginState}) => {
+
   return (
-  <MainStack/>
+    <>
+        {loginState == true ? <MainStack/> : <AuthStack/>}
+    </>
   )
 }
 

@@ -11,7 +11,7 @@ const Listing = ({ Navigation }) => {
             <ScrollView>
                 {USERS.map((users) => {
                     return <TouchableOpacity key={users.id} onPress={() => { navigation.navigate("ListingDetails" , {details : users} ) }}
-                        style={{ width: '100%', height: 200, backgroundColor: 'gray', marginVertical: '5%', alignItems: 'center', justifyContent: 'center' }}>
+                        style={{ height: 200, backgroundColor: 'gray', marginVertical: '5%', alignItems: 'center', justifyContent: 'center',marginHorizontal:'10%' }}>
                         <Text style={{ color: 'black' }}>{users.userName}</Text>
                         <Text style={{ color: 'black' }}>{users.email}</Text>
                     </TouchableOpacity>
